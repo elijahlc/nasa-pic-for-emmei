@@ -1,0 +1,37 @@
+body {
+	font-family: 'Silkscreen', cursive;
+	text-align: center;
+	background-color: #25034c;
+}
+
+h1 {
+	font-size: 4em;
+	color: #64dfdf;
+}
+
+button {
+	font-size: 2em;
+	font-family: 'Silkscreen', cursive;
+	background-color: #4ea8de;
+	border: solid 2px white;
+	border-radius: 2px;
+	color: white;
+	box-sizing: border-box;
+}
+
+button:hover {
+	background-color: #5390d9;
+}
+
+button:active {
+	border: solid 5px white;
+	box-sizing: border-box;
+}
+
+img {
+	height: 70vh;
+}
+
+div {
+	margin: 1em;
+}

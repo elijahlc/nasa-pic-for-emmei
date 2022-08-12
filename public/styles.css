@@ -41,6 +41,10 @@ p {
 	color: #64dfdf;
 }
 
+p {
+	font-family: 'Rajdhani', sans-serif;
+}
+
 div {
 	margin: 1em;
 	display: flex;
@@ -50,9 +54,9 @@ div {
 
 footer {
 	width: 100%;
-	position: fixed;
+	position: relative;
 	bottom: 0;
-	color: #3b037a;
+	color: #25034c;
 }
 
 @media (max-width: 400px) {

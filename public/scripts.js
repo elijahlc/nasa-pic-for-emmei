@@ -29,14 +29,20 @@ button.addEventListener('click', async () => {
 			date.split('-')[2]
 		}/${date.split('-')[0]}`;
 		p.innerHTML = explanation;
+		footer.style.color = '#3B037A';
 	} catch (err) {
 		console.log(err);
 	}
 });
 
 footer.addEventListener('click', () => {
-	footer.innerHTML = 'love you kiddo';
-	footer.style.color = '#64dfdf';
+	if (footer.innerHTML === 'secrets') {
+		footer.innerHTML = 'love you kiddo';
+		footer.style.color = '#64dfdf';
+	} else {
+		footer.innerHTML = 'secrets';
+		footer.style.color = '#3B037A';
+	}
 });
 
 function randomDate() {

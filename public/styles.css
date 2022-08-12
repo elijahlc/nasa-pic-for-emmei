@@ -7,6 +7,7 @@ body {
 h1 {
 	font-size: 4em;
 	color: #64dfdf;
+	margin: 0.5em;
 }
 
 button {
@@ -29,9 +30,21 @@ button:active {
 }
 
 img {
-	height: 70vh;
+	background-size: contain;
+	max-width: 750px;
+	max-height: 800px;
+}
+
+h2,
+h3,
+p {
+	padding-bottom: none;
+	color: #64dfdf;
 }
 
 div {
 	margin: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

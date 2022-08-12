@@ -30,7 +30,6 @@ button:active {
 }
 
 img {
-	background-size: contain;
 	max-width: 750px;
 	max-height: 800px;
 }
@@ -47,4 +46,15 @@ div {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+@media (max-width: 400px) {
+	h1 {
+		font-size: 3em;
+	}
+
+	img {
+		max-width: 375px;
+		max-height: 600px;
+	}
 }

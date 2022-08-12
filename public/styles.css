@@ -48,6 +48,13 @@ div {
 	align-items: center;
 }
 
+footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	color: #3b037a;
+}
+
 @media (max-width: 400px) {
 	h1 {
 		font-size: 3em;

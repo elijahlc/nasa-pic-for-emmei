@@ -1,5 +1,6 @@
 const button = document.querySelector('button');
 const div = document.querySelector('div');
+const footer = document.querySelector('footer');
 
 button.addEventListener('click', async () => {
 	try {
@@ -31,6 +32,11 @@ button.addEventListener('click', async () => {
 	} catch (err) {
 		console.log(err);
 	}
+});
+
+footer.addEventListener('click', () => {
+	footer.innerHTML = 'love you kiddo';
+	footer.style.color = '#64dfdf';
 });
 
 function randomDate() {

@@ -1,5 +1,4 @@
 const button = document.querySelector('button');
-const div = document.querySelector('div');
 const footer = document.querySelector('footer');
 
 button.addEventListener('click', async () => {
@@ -7,7 +6,7 @@ button.addEventListener('click', async () => {
 		const config = {
 			params: {
 				api_key: 'gYwfDAePsJCg6hg52CFQbZ21jXCCcv4zJNGAei6T',
-				date: `${randomDate()}`,
+				date: `${randomDate(new Date(2000, 0, 1), new Date())}`,
 			},
 		};
 
@@ -17,6 +16,9 @@ button.addEventListener('click', async () => {
 		);
 
 		const { url, explanation, date, title } = response.data;
+		const month = date.split('-')[1];
+		const day = date.split('-')[2];
+		const year = date.split('-')[0];
 
 		const img = document.querySelector('img');
 		const h2 = document.querySelector('h2');
@@ -25,11 +27,12 @@ button.addEventListener('click', async () => {
 
 		img.src = url;
 		h2.innerHTML = title;
-		h3.innerHTML = `Daily image on ${date.split('-')[1]}/${
-			date.split('-')[2]
-		}/${date.split('-')[0]}`;
+		h3.innerHTML = `Daily image on ${month}/${day}/${year}`;
 		p.innerHTML = explanation;
+
 		footer.style.color = '#3B037A';
+		ufo.style.transform = 'translateY(-100px)';
+		ufo.style.transform += 'translateX(100px)';
 	} catch (err) {
 		console.log(err);
 	}
@@ -45,55 +48,10 @@ footer.addEventListener('click', () => {
 	}
 });
 
-function randomDate() {
-	const days = [
-		'01',
-		'02',
-		'03',
-		'04',
-		'05',
-		'06',
-		'07',
-		'08',
-		'09',
-		'10',
-		'11',
-		'12',
-		'13',
-		'14',
-		'15',
-		'16',
-		'17',
-		'18',
-		'19',
-		'20',
-		'21',
-		'22',
-		'23',
-		'24',
-		'25',
-		'26',
-		'27',
-		'28',
-	];
+function randomDate(start, end) {
+	const date = new Date(
+		start.getTime() + Math.random() * (end.getTime() - start.getTime())
+	);
 
-	const months = [
-		'01',
-		'02',
-		'03',
-		'04',
-		'05',
-		'06',
-		'07',
-		'08',
-		'09',
-		'10',
-		'11',
-		'12',
-	];
-
-	const month = months[Math.floor(Math.random() * 12)];
-	const day = days[Math.floor(Math.random() * 28)];
-	const year = Math.floor(Math.random() * 22 + 2000).toString();
-	return `${year}-${month}-${day}`;
+	return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 }

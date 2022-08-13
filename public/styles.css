@@ -25,7 +25,8 @@ button:hover {
 }
 
 button:active {
-	border: solid 5px white;
+	border-right: solid 5px white;
+	border-left: solid 5px white;
 	box-sizing: border-box;
 }
 
